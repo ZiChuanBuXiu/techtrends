@@ -1,0 +1,11 @@
+2021-07-12 20:15:14 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-07-12 20:15:16 INFO     Article "2020 CNCF Annual Report" retrieved!
+2021-07-12 20:15:16 INFO     127.0.0.1 - - [12/Jul/2021 20:15:16] "GET /1 HTTP/1.1" 200 -
+2021-07-12 20:16:08 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-07-12 20:16:11 INFO     Article "2020 CNCF Annual Report" retrieved!
+2021-07-12 20:16:11 INFO     127.0.0.1 - - [12/Jul/2021 20:16:11] "GET /1 HTTP/1.1" 200 -
+2021-07-12 20:16:18 INFO     Article "KubeCon + CloudNativeCon 2021" retrieved!
+2021-07-12 20:16:18 INFO     127.0.0.1 - - [12/Jul/2021 20:16:18] "GET /2 HTTP/1.1" 200 -
+2021-07-12 20:17:27 INFO      * Running on http://0.0.0.0:3111/ (Press CTRL+C to quit)
+2021-07-12 20:17:33 INFO     Article "KubeCon + CloudNativeCon 2021" retrieved!
+2021-07-12 20:17:33 INFO     127.0.0.1 - - [12/Jul/2021 20:17:33] "GET /2 HTTP/1.1" 200 -
