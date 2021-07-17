@@ -75,7 +75,7 @@ def create():
                                (title, content))
             connection.commit()
             connection.close()
-            app.logger.info("Article not found for id %s".format(post))
+            app.logger.info("Article created: \"%s\"".format(title))
             return redirect(url_for('index'))
 
     return render_template('create.html')
