@@ -1,5 +1,6 @@
 import logging
 import sqlite3
+import sys
 
 from flask import Flask, json, render_template, request, url_for, redirect, flash
 
@@ -100,7 +101,7 @@ def metrics():
     connection.close()
     response = app.response_class(
         response=json.dumps({"db_connection_count": global_vars['active_connection_count'],
-                             "post_count": posts.count()}),
+                             "post_count": len(posts)}),
         status=200,
         mimetype='application/json'
     )
@@ -109,7 +110,11 @@ def metrics():
 
 # start the application on port 3111
 if __name__ == "__main__":
+    stdout_handler = logging.StreamHandler(sys.stdout)
+    stderr_handler = logging.StreamHandler(sys.stderr)
+    handlers = [stderr_handler, stdout_handler]
     logging.basicConfig(format='%(levelname)s:%(name)s:%(asctime)s, %(message)s',
                         level=logging.DEBUG,
-                        datefmt='%d/%m/%Y, %H:%M:%S')
+                        datefmt='%d/%m/%Y, %H:%M:%S',
+                        handlers=handlers)
     app.run(host='0.0.0.0', port=3111)
